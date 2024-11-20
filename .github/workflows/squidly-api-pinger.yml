@@ -13,5 +13,5 @@ jobs:
       - name: 🔄 Ping beta api
         shell: bash
         run: |
-          curl --location '{ secrets.SQUIDLY_BETA_PING_ENDPOINT }' \
-               --header 'x-monitoring-secret: { secrets.SQUIDLY_BETA_SECRET_HEADER }'
+          curl --location '${{ secrets.SQUIDLY_BETA_PING_ENDPOINT }}' \
+               --header 'x-monitoring-secret: ${{ secrets.SQUIDLY_BETA_SECRET_HEADER }}'
