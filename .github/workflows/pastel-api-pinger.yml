@@ -13,4 +13,4 @@ jobs:
       - name: 🔄 Ping staging api
         shell: bash
         run: |
-          curl -X GET ${{ secrets.STAGING_PING_ENDPOINT }} -H "Origin: ${{ secrets.STAGING_FRONT_APP_URL }}" -H "Accept: application/json" -H "Referrer: ${{ secrets.STAGING_FRONT_APP_URL }}" -H "User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" 
+          curl -X GET ${{ secrets.STAGING_PING_ENDPOINT }} -H "Origin: ${{ secrets.STAGING_FRONT_APP_URL }}" -H "Accept: application/json" -H "Referrer: ${{ secrets.STAGING_FRONT_APP_URL }}" -H "User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
