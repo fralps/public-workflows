@@ -1,16 +1,16 @@
-name: Ping Pastel API
-on:
-  schedule:
-    - cron: "*/5 * * * *"
+# name: Ping Pastel API
+# on:
+#   schedule:
+#     - cron: "*/5 * * * *"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: ⚙️ Checkout repo
-        uses: actions/checkout@v3
-      - name: 🔄 Ping staging api
-        shell: bash
-        run: |
-          curl -X GET ${{ secrets.STAGING_PING_ENDPOINT }} -H "Origin: ${{ secrets.STAGING_FRONT_APP_URL }}" -H "Accept: application/json" -H "Referrer: ${{ secrets.STAGING_FRONT_APP_URL }}" -H "User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
+#     steps:
+#       - name: ⚙️ Checkout repo
+#         uses: actions/checkout@v3
+#       - name: 🔄 Ping staging api
+#         shell: bash
+#         run: |
+#           curl -X GET ${{ secrets.STAGING_PING_ENDPOINT }} -H "Origin: ${{ secrets.STAGING_FRONT_APP_URL }}" -H "Accept: application/json" -H "Referrer: ${{ secrets.STAGING_FRONT_APP_URL }}" -H "User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
